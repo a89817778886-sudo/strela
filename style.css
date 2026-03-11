@@ -1,0 +1,742 @@
+/* style.css — стиль как на ecoterra, шрифты SF UI */
+
+:root {
+  --primary: #FFD700;           /* Яркий жёлтый акцент */
+  --primary-light: #FFF8DC;      /* Светло-жёлтый фон */
+  --bg-light: #f5f5f5;           /* Светло-серый фон для карточек */
+  --text-dark: #000000;          /* Чёрный текст */
+  --text-light: #333333;         /* Тёмно-серый текст */
+  --border-light: #e0e0e0;       /* Серые границы */
+  --accent: #FFA500;             /* Оранжевый для кнопок */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF UI Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: var(--text-dark);
+  line-height: 1.5;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---------- Шапка (белая) ---------- */
+.header {
+  background: #ffffff;
+  color: var(--text-dark);
+  padding: 0.8rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  flex: 0 0 auto;
+  max-width: 250px;
+}
+
+.logo-link {
+  display: block;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 300;
+  font-size: 1rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.2s;
+}
+
+.nav__link:hover {
+  color: var(--primary);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__link.active {
+  color: var(--primary);
+  font-weight: 400;
+}
+.nav__link.active::after {
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-phone {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.header-phone:hover {
+  color: var(--primary);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  transition: 0.2s;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: var(--text-dark);
+  transform: scale(1.1);
+}
+
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--primary);
+  color: var(--text-dark);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+}
+
+.btn:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--text-dark);
+  color: var(--text-dark);
+  box-shadow: none;
+}
+
+.btn--outline:hover {
+  background: var(--text-dark);
+  color: var(--primary);
+}
+
+.btn--secondary {
+  background: var(--bg-light);
+  color: var(--text-dark);
+  box-shadow: none;
+  border: 1px solid var(--border-light);
+}
+
+.btn--secondary:hover {
+  background: #e0e0e0;
+}
+
+/* ---------- Hero с фоновым изображением ---------- */
+.hero {
+  padding: 6rem 0;
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+  position: relative;
+}
+
+.hero__inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero__title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.hero__text {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- Секции ---------- */
+.section {
+  padding: 5rem 0;
+}
+
+.section--light {
+  background: #ffffff;
+}
+
+.section--gray {
+  background: var(--bg-light);
+}
+
+.section__title {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.section__subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  font-weight: 300;
+}
+
+/* ---------- Карточки преимуществ (статистика) как на ecoterra ---------- */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin: 3rem 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  font-weight: 300;
+}
+
+/* ---------- Этапы работы (как на ecoterra) ---------- */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.step-item {
+  text-align: center;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--text-dark);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+}
+
+.step-item h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+.step-item p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ---------- Карточки услуг (на главной) ---------- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.service-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.02);
+  transition: all 0.2s;
+  border: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.icon-arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 40px solid #FFD700;
+  margin: 0 auto 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- CTA секция ---------- */
+.cta {
+  background: var(--primary);
+  color: var(--text-dark);
+  text-align: center;
+  padding: 4rem 0;
+  border-radius: 30px;
+  margin: 2rem 0;
+}
+
+.cta h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text-dark);
+}
+
+.cta .btn {
+  background: var(--text-dark);
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.cta .btn:hover {
+  background: #333333;
+  color: var(--primary);
+}
+
+/* ---------- Сетка для страниц услуг (текст + фото) ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 2rem;
+}
+
+.grid__content h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 2rem 0 1rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+.grid__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-light);
+}
+
+.note {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* ---------- Карточки этапов и преимуществ на страницах услуг ---------- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.info-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+  border: 1px solid var(--border-light);
+  transition: all 0.2s;
+}
+
+.info-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.info-card h4 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.info-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ---------- Контакты (карточки) ---------- */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid var(--border-light);
+}
+
+.contact-card__title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.8rem;
+}
+
+.contact-card__title i {
+  font-size: 1.4rem;
+}
+
+.contact-card__content p {
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+  font-weight: 300;
+}
+
+.requisites-list {
+  list-style: none;
+  padding: 0;
+}
+
+.requisites-list li {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.requisites-list li i {
+  color: var(--primary);
+  width: 20px;
+  margin-top: 0.2rem;
+}
+
+/* ---------- Мессенджеры (блок) ---------- */
+.messengers-block {
+  background: white;
+  padding: 2rem;
+  border-radius: 30px;
+  border: 1px solid var(--border-light);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.messengers-block__title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.messengers-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.messenger-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 400;
+  color: white;
+  transition: 0.2s;
+}
+
+.messenger-icon--tg { background: #2aabee; }
+.messenger-icon--wa { background: #25d366; }
+.messenger-icon--vk { background: #4c75a3; }
+
+.messenger-icon:hover {
+  filter: brightness(0.9);
+  transform: translateY(-2px);
+}
+
+/* ---------- Формы ---------- */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-family: inherit;
+  background: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+/* ---------- Подвал ---------- */
+.footer {
+  background: #ffffff;
+  color: var(--text-dark);
+  border-top: 1px solid var(--border-light);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.footer a {
+  color: var(--text-dark);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer a:hover {
+  color: var(--primary);
+  border-bottom: 1px solid var(--primary);
+}
+
+/* ---------- Страницы услуг (общее) ---------- */
+.page {
+  padding: 4rem 0;
+}
+
+.page h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.page h1 i {
+  color: var(--text-dark);
+  margin-right: 0.8rem;
+}
+
+.page-img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 20px;
+  margin: 0 auto 2.5rem;
+  display: block;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+}
+
+/* ---------- Адаптивность ---------- */
+@media (max-width: 900px) {
+  .hero__title {
+    font-size: 2.6rem;
+  }
+  .section__title {
+    font-size: 2.2rem;
+  }
+  .stats-grid,
+  .steps-grid,
+  .services-grid,
+  .contacts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nav {
+    gap: 1rem;
+  }
+  .header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .logo {
+    max-width: 200px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .messengers-block {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .messengers-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__actions {
+    flex-direction: column;
+  }
+  .btn {
+    width: 100%;
+  }
+  .stats-grid,
+  .steps-grid,
+  .services-grid,
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero__title {
+    font-size: 2.2rem;
+  }
+  .messenger-icon {
+    width: 100%;
+    justify-content: center;
+  }
