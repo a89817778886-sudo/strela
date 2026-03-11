@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Стрела‑Кран</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-contacts {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f0f8ff 0%, #ffffff 100%);
+            border-bottom: 1px solid var(--border-light);
+            text-align: center;
+        }
+        .hero-contacts h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .hero-contacts p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <div class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="img/logo.png" alt="Стрела-Кран" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav__link">Главная</a>
+                <a href="montage.html" class="nav__link">Монтаж</a>
+                <a href="demontage.html" class="nav__link">Демонтаж</a>
+                <a href="service.html" class="nav__link">Сервис</a>
+                <a href="contacts.html" class="nav__link active">Контакты</a>
+            </nav>
+            <div class="header-contacts">
+                <a href="tel:+79643684161" class="header-phone">+7 (964) 368-41-61</a>
+                <a href="https://t.me/+79643684161" target="_blank" class="social-icon social-icon--tg" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://vk.com/club236308251" target="_blank" class="social-icon social-icon--vk" title="VK"><i class="fab fa-vk"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-contacts">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Мы всегда на связи и готовы обсудить ваш проект</p>
+        </div>
+    </section>
+
+    <section class="section section--light">
+        <div class="container">
+            <div class="contacts-grid">
+                <!-- Офис -->
+                <div class="contact-card">
+                    <div class="contact-card__title">
+                        <i class="fas fa-map-marker-alt"></i> Наш офис
+                    </div>
+                    <div class="contact-card__content">
+                        <p>г. Санкт-Петербург, шоссе Революции, 114</p>
+                        <p>пн-пт, 9:00–18:00</p>
+                    </div>
+                </div>
+
+                <!-- Специалист -->
+                <div class="contact-card">
+                    <div class="contact-card__title">
+                        <i class="fas fa-user-tie"></i> Олег
+                    </div>
+                    <div class="contact-card__content">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+79643684161">+7 (964) 368-41-61</a></p>
+                        <p><i class="fab fa-telegram-plane"></i> Telegram</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Заявки и звонки</p>
+                    </div>
+                </div>
+
+                <!-- Бухгалтерия -->
+                <div class="contact-card">
+                    <div class="contact-card__title">
+                        <i class="fas fa-calculator"></i> Бухгалтерия
+                    </div>
+                    <div class="contact-card__content">
+                        <p><i class="fas fa-phone"></i> <a href="tel:+79214126122">+7 (921) 412-61-22</a></p>
+                        <p><i class="fab fa-telegram-plane"></i> Telegram</p>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">Бухгалтерские вопросы и документация</p>
+                    </div>
+                </div>
+
+                <!-- Реквизиты -->
+                <div class="contact-card" style="grid-column: span 3;">
+                    <div class="contact-card__title">
+                        <i class="fas fa-file-invoice"></i> Реквизиты ИП Меньшикова Юлия Анатольевна
+                    </div>
+                    <div class="contact-card__content">
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+                            <ul class="requisites-list">
+                                <li><i class="fas fa-id-card"></i> <strong>ИНН:</strong> 780623104745</li>
+                                <li><i class="fas fa-user"></i> <strong>ОГРНИП:</strong> 323784700135705 от 25.04.2023</li>
+                                <li><i class="fas fa-map-marker-alt"></i> <strong>Адрес:</strong> 195030, Санкт-Петербург, ш. Революции д.114, лит.А, офис 121</li>
+                                <li><i class="fas fa-industry"></i> <strong>ОКВЭД 1:</strong> 43.99.5</li>
+                                <li><i class="fas fa-industry"></i> <strong>ОКВЭД 2:</strong> 69.20</li>
+                            </ul>
+                            <ul class="requisites-list">
+                                <li><i class="fas fa-university"></i> <strong>Расчетный счет:</strong> 40802810455000424447</li>
+                                <li><i class="fas fa-building"></i> <strong>Банк:</strong> ООО "Банк Точка"</li>
+                                <li><i class="fas fa-hashtag"></i> <strong>БИК:</strong> 044525104</li>
+                                <li><i class="fas fa-credit-card"></i> <strong>Корр. счёт:</strong> 30101810745374525104</li>
+                                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> kirsanova1982@mail.ru</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Мессенджеры -->
+            <div class="messengers-block">
+                <div class="messengers-block__title">
+                    <i class="fas fa-comment"></i> Мессенджеры и соцсети
+                </div>
+                <div class="messengers-icons">
+                    <a class="messenger-icon messenger-icon--tg" href="https://t.me/+79643684161" target="_blank"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                    <a class="messenger-icon messenger-icon--vk" href="https://vk.com/club236308251" target="_blank"><i class="fab fa-vk"></i> ВКонтакте</a>
+                </div>
+            </div>
+
+            <!-- Форма -->
+            <div style="margin-top: 3rem;">
+                <h2 class="section__title" style="margin-bottom: 2rem;">Напишите нам</h2>
+                <form class="contact-form" style="max-width: 700px; margin: 0 auto;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Телефон" required>
+                    </div>
+                    <input type="email" placeholder="Email (необязательно)">
+                    <textarea placeholder="Ваш вопрос или описание объекта" rows="4" required></textarea>
+                    <button class="btn" style="width: 100%; font-size: 1.1rem;"><i class="fas fa-paper-plane"></i> Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <span>© Стрела‑Кран, 2026</span>
+            <span>
+                <a href="tel:+79214126122"><i class="fas fa-phone"></i> +7 (921) 412-61-22</a> | 
+                <a href="https://vk.com/club236308251"><i class="fab fa-vk"></i> VK</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
